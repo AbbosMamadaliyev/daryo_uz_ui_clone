@@ -19,9 +19,9 @@ class _DrawerBodyState extends State<DrawerBody> {
               Container(
                 height: 40,
                 color: Colors.yellow.shade200,
-                padding: EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 16),
                 alignment: Alignment.centerLeft,
-                child: Text('Qo\'llanma ekranini ko\'rsatish'),
+                child: const Text('Qo\'llanma ekranini ko\'rsatish'),
               ),
               _buildCategoriesNews('So\'ngi yangiliklar'),
               _buildCategoriesNews('Mahalliy'),
@@ -31,9 +31,9 @@ class _DrawerBodyState extends State<DrawerBody> {
               Container(
                 height: 40,
                 color: Colors.white38,
-                padding: EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 16),
                 alignment: Alignment.centerLeft,
-                child: Text(
+                child: const Text(
                   'Tanlangan xabarlar',
                   style: TextStyle(color: Colors.green),
                 ),
@@ -70,7 +70,7 @@ class _DrawerBodyState extends State<DrawerBody> {
     return Container(
       height: 40,
       color: Colors.white38,
-      padding: EdgeInsets.only(left: 16),
+      padding: const EdgeInsets.only(left: 16),
       alignment: Alignment.centerLeft,
       child: Text(txt),
     );

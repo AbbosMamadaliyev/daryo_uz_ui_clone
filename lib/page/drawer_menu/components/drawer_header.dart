@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DrawerHeaderWidget extends StatefulWidget {
@@ -56,11 +57,12 @@ class _DrawerHeaderWidgetState extends State<DrawerHeaderWidget> {
           ),
           const Divider(color: Colors.white),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _buildCourseMoneys(Icons.monetization_on_outlined, ' 10769.78'),
               // SizedBox(width: 5),
-              _buildCourseMoneys(Icons.euro_symbol_outlined, ' 12166.78'),
+              _buildCourseMoneys(CupertinoIcons.money_euro_circle, ' 12166.65'),
+              _buildCourseMoneys(CupertinoIcons.money_rubl_circle, ' 145.45'),
             ],
           ),
         ],

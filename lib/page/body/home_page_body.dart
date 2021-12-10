@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:daryo_uz_ui_clone/model/news_model.dart';
+import 'package:daryo_uz_ui_clone/page/read_news_page.dart';
 import 'package:flutter/material.dart';
 
 import 'components/category_and_image.dart';
@@ -18,14 +19,20 @@ class _HomePageBodyState extends State<HomePageBody> {
   Widget build(BuildContext context) {
     return ListView.separated(
       itemBuilder: (context, index) {
-        return Container(
-          margin: EdgeInsets.all(12),
-          child: Row(
-            children: [
-              CategoryAndImageUrl(index: index),
-              SizedBox(width: 12),
-              TitleNews(index: index),
-            ],
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => ReadNewsPage(index: index)));
+          },
+          child: Container(
+            margin: EdgeInsets.all(12),
+            child: Row(
+              children: [
+                CategoryAndImageUrl(index: index),
+                SizedBox(width: 12),
+                TitleNews(index: index),
+              ],
+            ),
           ),
         );
       },
